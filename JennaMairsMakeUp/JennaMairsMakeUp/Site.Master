@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="JennaMairsMakeUp.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>JennaMairsMakeUpArtist</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <!-- stylesheets -->
+    <link href="~/Styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/dark.css" rel="stylesheet" type="text/css" />
+    <!-- modernizr enables HTML5 elements and feature detects -->
+    <script type="text/javascript" src="~/js/modernizr-1.5.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+    <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+    <script type="text/javascript" src="js/image_fade.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- initialise sooperfish menu -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('ul.sf-menu').sooperfish();
+            $('a').hover(mouseover(this),mouseout(this));
+
+        });
+
+        function mouseover(obj) {
+            var text = obj.innerText;
+            if (!obj.hasClass('selected')) {
+                
+                text = "[" + text + "]";
+                obj.innerText = text;
+            }
+        }
+        function mouseout(obj) {
+                var text = obj.innerText;
+                if (!obj.hasClass('selected')) {
+                text = text.replace('[', '');
+                text = text.replace(']', '');
+                obj.innerText = text;
+            }
+        }
+
+
+    </script>
+    <form runat="server">
+    <div class="page">
+        <div id="main">
+            <div class="header">
+                <div id="logo">
+                    <asp:Image runat="server" CssClass="showOnTop"  src="images/Jenna-Mairs-Logo2.png" /></div>
+                <div class="nav">
+                    <ul class="sf-menu" id="nav">
+                        <li><a id="homeLink"  runat="server"  
+                            href="Index.aspx">home </a></li>
+                        <li><a id="aboutLink" runat="server" href="About.aspx" 
+                            >about me </a></li>
+                        <li><a id="galleryLink" runat="server" href="portfolio_one.aspx" 
+                            >gallery </a></li>
+                        <li><a id="blogLink" runat="server" href="blog.aspx" 
+                            >blog </a></li>
+                        <li><a id="contactLink" runat="server" href="contact.aspx" 
+                            >contact </a></li>
+                    </ul>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            <div id="footer">
+                <p>
+                    Copyright &copy; 2012 JennaMairs. All Rights Reserved.</p>
+                <p>
+                    <img src="images/twitter.png" alt="twitter" /><img src="images/facebook.png" alt="facebook" /><img
+                        src="images/rss.png" alt="rss" /></p>
+            </div>
+        </div>
+        </div>
+    </form>
+</body>
+</html>

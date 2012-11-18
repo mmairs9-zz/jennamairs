@@ -1,0 +1,4 @@
+C:\Users\Matt\documents\visual studio 2010\Projects\JennaMairsMakeUp\JennaMairsMakeUp\bin\JennaMairsMakeUp.dll
+C:\Users\Matt\documents\visual studio 2010\Projects\JennaMairsMakeUp\JennaMairsMakeUp\bin\JennaMairsMakeUp.pdb
+C:\Users\Matt\documents\visual studio 2010\Projects\JennaMairsMakeUp\JennaMairsMakeUp\obj\Debug\JennaMairsMakeUp.dll
+C:\Users\Matt\documents\visual studio 2010\Projects\JennaMairsMakeUp\JennaMairsMakeUp\obj\Debug\JennaMairsMakeUp.pdb
